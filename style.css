@@ -113,7 +113,8 @@ p {
 
 .link{
     display:block;
-    magin:auto;
+    magin:auto auto 20px 250px;
+    
 }
 
 
