@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monik</title>
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+     <link rel="stylesheet" href="./src/output.css">
+     <link rel="stylesheet" href="input.css">
+
+    <!-- aos nimation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        font-family: "Merriweather", serif;
+        /* overflow-x: hidden; */
+      }
+      @media only screen and (max-width: 768px) {
+        html {
+          overflow-x: hidden;
+        }
+      }
+/* 
+      #img {
+        -webkit-mask-box-image: "Monik";
+        mask-image: "Monik";
+        mask-size: 100%;
+        mask-repeat: no-repeat;
+
+        display: none;
+      } */
+    </style>
+  </head>
+
+  <body class="bg-slate-900 text-gray-200 overflow-x-hidden  ">
+    <!-- Nav Bar  -->
+    <nav class="bg-slate-900 fixed w-full top-0 z-50" >
+      <!-- full Nav -->
+      <div  data-aos="flip-right"
+        class="bg-slate-900 flex lg:justify-around justify-between items-center text-xl lg:text-3xl px-5 py-2 lg:py-0"
+      >
+        <a href="./" class="hover:text-blue-600 hover:underline lg:text-3xl"
+          >Monik</a
+        >
+
+        <div class="lg:block hidden">
+          <div
+            class="flex justify-around items-center text-xl lg:text-3xl px-5 gap-16"
+          >
+            <!-- links -->
+            <div class="links flex gap-10 bg-transparent px-12 py-3">
+              <a href="./" class="hover:text-blue-600 hover:underline">Home</a>
+              <a href="#skill" class="hover:text-blue-600 hover:underline"
+                >Skills</a
+              >
+              <!-- <a href="#" class="hover:text-blue-600 hover:underline"
+                >Projects</a
+              > -->
+              <a href="#Contect" class="hover:text-blue-600 hover:underline">Contect</a>
+            </div>
+          </div>
+        </div>
+        <span class="lg:invisible" id="navMenu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="40px"
+            viewBox="0 -960 960 960"
+            width="40px"
+            fill="#9ca3af"
+          >
+            <path
+              d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"
+            />
+          </svg>
+        </span>
+      </div>
+
+      <!-- Phone -->
+
+      <div id="navBar" class="fixed hidden inset-0 backdrop-blur-3xl overflow-hidden">
+        <div class="top flex justify-between items-center px-5 py-2">
+          <a href="#" class="hover:text-blue-600 hover:underline text-xl"
+            >Monik</a
+          >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="navCros"
+            height="40px"
+            viewBox="0 -960 960 960"
+            width="40px"
+            fill="#9ca3af"
+          >
+            <path
+              d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"
+            />
+          </svg>
+        </div>
+
+        <!-- Phone-links -->
+        <div
+          class="flex flex-col mt-24 gap-10 justify-center items-center text-3xl overflow-hidden "
+        >
+          <li class="list-none">
+            <a href="./" class="hover:text-blue-600 navCrosLink overflow-hidden" >Home</a>
+          </li>
+          <li class="list-none">
+            <a href="#skill" class="hover:text-blue-600 navCrosLink overflow-hidden"   >Skills</a>
+          </li>
+          <!-- <li class="list-none">
+            <a href="#" class="hover:text-blue-600 navCrosLink overflow-hidden"  >Projects</a>
+          </li> -->
+          <li class="list-none">
+            <a href="#Contect" class="hover:text-blue-600 navCrosLink overflow-hidden"  >Contect</a>
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Body -->
+
+    <div class="m-auto mt-8 lg:mt-14">
+      <div class="flex flex-col justify-center items-center gap-10">
+        <img src="./asset/myimg.png" class="w-96 lg:w-[17rem]" id="mainimg" data-aos="fade-down" />
+        <h1 class="text-3xl md:text-5xl text-center overflow-hidden" data-aos="fade-down">
+          Hello I'm Monik <br />
+          <span id="type"></span>
+        </h1>
+      </div>
+      <p class="text-sm lg:w-1/2 md:w-9/12 w-11/12 m-auto text-center p-5" data-aos="fade-down">
+        As a dedicated full-stack developer, I turn ideas into reality by
+        building smooth and interactive web app that are easy to use and highly
+        functional. I use my skills in both frontend and backend development to
+        create innovative and scalable solutions.
+      </p>
+      <!-- Download, Linkdin and Github Links  -->
+      <div data-aos="fade-up"
+        class="links flex justify-center items-center m-5 gap-12 lg:gap-x-36 md:gap-x-24"
+      >
+        <a
+          href="./asset/Monik Rupareliya.pdf"
+          download
+          class="w-40 p-2 rounded-full border-2 flex text-center justify-evenly"
+        >
+          Resume
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#9ca3af"
+          >
+            <path
+              d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://linkedin.com/in/monikrupareliya"
+          target="_blank"
+          class=""
+          ><i class="fa-brands fa-linkedin fa-2xl"></i>
+        </a>
+        <a href="https://github.com" class="">
+          <i class="fa-brands fa-github fa-2xl"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Skills -->
+    <section id="skill" class="text-gray-400  body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 data-aos="zoom-in-down"
+            class=" text-center text-2xl font-medium title-font mb-4 text-white tracking-widest"
+          >
+            Skills
+          </h1>
+        </div>
+        <!-- respnsive websites -->
+        <div class="flex flex-wrap -m-4">
+          <div
+            class="p-4 lg:w-[48%] m-2 rounded-lg bg-slate-800"
+            data-aos="fade-up-left"
+          >
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+            >
+              <img
+                alt="team"
+                class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./asset/respnsive.webp"
+              />
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-white">
+                  Responsive Web Design
+                </h2>
+                <p class="mb-4">
+                  Responsive Web Design ensures websites adapt seamlessly to any
+                  device, providing an optimal user experience on desktops,
+                  tablets, and smartphones.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- html/css -->
+          <div
+            class="p-4 lg:w-[48%] m-2 rounded-lg bg-slate-800"
+            data-aos="fade-up-right"
+          >
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+            >
+              <img
+                alt="team"
+                class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./asset/html-css.webp"
+              />
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-white">
+                  HTML/CSS Development
+                </h2>
+                <p class="mb-4">
+                  HTML/CSS development involves creating the structure and style
+                  of web pages, ensuring they are both visually appealing and
+                  user-friendly.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- spa devlopment -->
+          <div
+            class="p-4 lg:w-[48%] m-2 rounded-lg bg-slate-800"
+            data-aos="fade-up-left"
+          >
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+            >
+              <img
+                alt="team"
+                class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./asset/spa.jpg"
+              />
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-white">
+                  SPA Development
+                </h2>
+                <p class="mb-4">
+                  SPA development focuses on creating dynamic web applications
+                  that operate within a single web page, providing a seamless
+                  and responsive user experience similar to desktop
+                  applications.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- React -->
+          <div
+            class="p-4 lg:w-[48%] m-2 rounded-lg bg-slate-800"
+            data-aos="fade-up-right"
+          >
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+            >
+              <img
+                alt="team"
+                class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./asset/react.svg"
+              />
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-white">
+                  React Js Devloper
+                </h2>
+                <p class="mb-4">
+                  React is a JavaScript library for building user interfaces,
+                  focusing on creating reusable components and efficiently
+                  updating the UI with a virtual DOM. It enables fast, dynamic
+                  web applications through its declarative and component-based
+                  architecture.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <!-- <div
+            class="p-4 lg:w-[48%] m-2 rounded-lg bg-slate-800"
+            data-aos="fade-up-left"
+          >
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+            >
+              <img
+                alt="team"
+                class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="https://dummyimage.com/204x204"
+              />
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-white">
+                  Atticus Finch
+                </h2>
+                <p class="mb-4">
+                  DIY tote bag drinking vinegar cronut adaptogen squid fanny
+                  pack vaporware.
+                </p>
+              </div>
+            </div>
+          </div> -->
+          <!--  -->
+          <!-- <div
+            class="p-4 lg:w-[48%] m-2 rounded-lg bg-slate-800"
+            data-aos="fade-up-right"
+          >
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+            >
+              <img
+                alt="team"
+                class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="https://dummyimage.com/206x206"
+              />
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-white"></h2>
+                <p class="mb-4">
+                  DIY tote bag drinking vinegar cronut adaptogen squid fanny
+                  pack vaporware.
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <!--  Contect -->
+    </section>
+
+    <section  class="mb-48 md:mb-20 py-24">
+
+        <h1  class="text-center text-2xl font-medium title-font mb-4 pb-14 text-white tracking-widest" data-aos="zoom-in-down">Contact</h1>
+
+        <div id="Contect" class="card-wrapper m-auto max-w-[23rem] md:max-w-96 text-lg  h-60  md:p-5 p-1 mx-4 md:m-auto flex flex-col justify-evenly " data-aos="zoom-out-up">
+            <div class="card-content call flex justify-evenly flex-col gap-4 text-center ">
+              
+              <a href="tel:+91 9427933595" class=" flex gap-2  items-center">  
+                <svg class="inline" xmlns="http://www.w3.org/2000/svg" height="25px" width="25px" viewBox="0 -960 960 960"  fill="#9ca3af"><path d="M796-120q-119 0-240-55.5T333-333Q231-435 175.5-556T120-796q0-18.86 12.57-31.43T164-840h147.33q14 0 24.34 9.83Q346-820.33 349.33-806l26.62 130.43q2.05 14.9-.62 26.24-2.66 11.33-10.82 19.48L265.67-530q24 41.67 52.5 78.5T381-381.33q35 35.66 73.67 65.5Q493.33-286 536-262.67l94.67-96.66q9.66-10.34 23.26-14.5 13.61-4.17 26.74-2.17L806-349.33q14.67 4 24.33 15.53Q840-322.27 840-308v144q0 18.86-12.57 31.43T796-120ZM233-592l76-76.67-21-104.66H187q3 41.66 13.67 86Q211.33-643 233-592Zm365.33 361.33q40.34 18.34 85.84 29.67 45.5 11.33 89.16 13.67V-288l-100-20.33-75 77.66ZM233-592Zm365.33 361.33Z"/></svg>
+                9427933595</a>
+              
+                <a href="mailto:monikrupareliya123@gmail.com" class= " flex gap-2  items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="25px" width="25px" viewBox="0 -960 960 960"  fill="#9ca3af"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                  monikrupareliy123@gmail.com</a>
+                  <span class= "flex gap-2  items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#9ca3af"><path d="M480.06-486.67q30.27 0 51.77-21.56 21.5-21.55 21.5-51.83 0-30.27-21.56-51.77-21.55-21.5-51.83-21.5-30.27 0-51.77 21.56-21.5 21.55-21.5 51.83 0 30.27 21.56 51.77 21.55 21.5 51.83 21.5ZM480-168q129.33-118 191.33-214.17 62-96.16 62-169.83 0-114.86-73.36-188.1-73.36-73.23-179.97-73.23T300.03-740.1q-73.36 73.24-73.36 188.1 0 73.67 63 169.83Q352.67-286 480-168Zm0 88Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+                    Ahmdabad
+                  </span>
+                </div>
+        </div>
+
+    </section>
+
+    
+
+  </body>
+
+  <!-- jqurey -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- typing script -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- aos script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    // auto typing js
+    var typed = new Typed("#type", {
+      strings: [
+        "Full Stack Devloper",
+        "MERN Stack Devloper",
+        "Frontend Devloper",
+        "React Js Devloper",
+      ],
+      typeSpeed: 150,
+      backSpeed: 150,
+      loop: true,
+    });
+
+    // menu Close Open
+    $(document).ready(() => {
+      $("#navMenu").click(() => {
+        $("#navBar").slideDown(1000);
+        setTimeout(() => {
+          $("#navCros").addClass("rotate-45");
+        }, 200);
+        setTimeout(() => {
+          $("#navCros").addClass("rotate-90");
+          $("#navCros").removeClass("rotate-45");
+        }, 230);
+      });
+      $(".navCros").click(() => {
+        $("#navBar").slideUp(1000);
+      });
+      $(".navCrosLink").click(() => {
+        $("#navBar").fadeOut();
+      });
+
+    });
+  </script>
+</html>
